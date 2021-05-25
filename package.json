@@ -1,0 +1,35 @@
+{
+  "name": "@livefeed/monorepo",
+  "version": "1.0.0",
+  "repository": "git@github.com:jeremN/livefeed.git",
+  "description": "Livefeed monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "keywords": [],
+  "author": "Jérémie Néhlil",
+  "license": "GNU GENERAL PUBLIC LICENSE V3",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.1",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0"
+  },
+  "lint-staged": {
+    "*.{ts, tsx}": "eslint '*/**/*.{js,ts,tsx}' --cache --fix"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "lerna run dev",
+    "prettier": "prettier '*/**/*.{ts,tsx,js,json}' --write",
+    "lint": "lerna run lint",
+    "lint-staged": "lerna run lint-staged"
+  }
+}
