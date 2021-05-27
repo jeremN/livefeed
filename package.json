@@ -11,6 +11,10 @@
   "author": "Jérémie Néhlil",
   "license": "GNU GENERAL PUBLIC LICENSE V3",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/config-lerna-scopes": "^12.1.4",
+    "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "eslint": "^7.27.0",
@@ -20,7 +24,8 @@
     "jest": "^27.0.1",
     "lerna": "^4.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0"
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2"
   },
   "lint-staged": {
     "*.{ts, tsx}": "eslint '*/**/*.{js,ts,tsx}' --cache --fix"

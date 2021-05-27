@@ -8,9 +8,18 @@
     "commonjs": true,
     "node": true
   },
+  "plugins": [
+    "@typescript-eslint",
+    "node"
+  ],
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module"
+  },
+  "settings": {
+    "node": {
+      "tryExtensions": [".js", ".json", ".node", ".ts"],
+    },
   },
   "rules": {
     "node/exports-style": ["error", "exports"],
@@ -23,9 +32,6 @@
     "node/prefer-promises/dns": "error",
     "node/prefer-promises/fs": "error",
     "no-underscore-dangle": "off",
-    "node/no-unsupported-features/es-syntax": [
-      "error",
-      { "ignores": ["modules"] }
-    ]
+    "node/no-unsupported-features/es-syntax": ["error", { "ignores": ["modules"] }],
   }
 }

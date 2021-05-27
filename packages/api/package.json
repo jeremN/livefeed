@@ -6,6 +6,9 @@
   "types": "build/index",
   "type": "module",
   "files": ["build"],
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "scripts": {
     "start": "node index.ts",
     "dev": "nodemon -r index.ts",
