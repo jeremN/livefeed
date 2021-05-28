@@ -11,23 +11,13 @@ export interface Colors {
   [key: string]: string | HSLOutput;
 }
 
-export interface FontSizes {
-  default: number;
-  title: number;
-  h1: number;
-  h2: number;
-  h3: number;
-  h4: number;
-  h5: number;
-  h6?: number;
-  quotes?: number;
-  tags?: number;
+export interface DynamicObjProps {
+  [key: string]: string;
 }
 
-export interface LineHeights {
-  default: number;
-  condensed?: number;
-}
+export type LineHeights = {
+  [key: string]: number;
+};
 
 export interface FontWeights {
   default: number;
@@ -43,4 +33,8 @@ export interface BreakpointsProps {
 
 export interface Breakpoints {
   [key: string]: BreakpointsProps;
+}
+
+export interface CustomElementProps extends React.HTMLAttributes<HTMLElement> {
+  children?: React.ReactNode;
 }

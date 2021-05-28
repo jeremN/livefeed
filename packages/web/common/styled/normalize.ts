@@ -1,19 +1,23 @@
 import { css, createGlobalStyle } from 'styled-components';
 
+import { primaryFont } from '../styled/theme';
+
 export const normalize = css`
   html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
   }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: ${primaryFont};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   *,
   *::before,
   *::after {
-    box-sizing: border-box;
+    box-sizing: inherit;
   }
   main {
     display: block;

@@ -1,4 +1,4 @@
-import { Colors, FontSizes, LineHeights, FontWeights, Breakpoints } from '../../types/index';
+import { Colors, DynamicObjProps, LineHeights, FontWeights, Breakpoints } from '../../types/index';
 
 export const colors: Colors = {
   black: 'hsla(0, 0%, 0%, 1)',
@@ -23,27 +23,29 @@ export const darkModeColors: Colors = {
   gallery: 'hsla(0, 0%, 92%, 1)', // text color
 };
 
-export const fontSizes: FontSizes = {
-  title: 48,
-  h1: 32,
-  h2: 24,
-  h3: 20,
-  h4: 16,
-  h5: 14,
-  h6: 12,
-  default: 16,
-  quotes: 20,
-  tags: 14,
+export const fontSizes: DynamicObjProps = {
+  title: '3rem',
+  h1: '2rem',
+  h2: '1.5rem',
+  h3: '1.25rem',
+  h4: '1rem',
+  h5: '0.875rem',
+  h6: '0.75rem',
+  default: '1rem',
+  quotes: '1.25',
+  tags: '0.875rem',
 };
 
-export const lineHeight: LineHeights = {
+export const lineHeights: LineHeights = {
   default: 1.5,
   condensed: 1.25,
 };
 
 export const fontWeights: FontWeights = {
+  thin: 100,
   default: 400,
   bold: 700,
+  black: 900,
 };
 
 export const breakpoints: Breakpoints = {
@@ -64,3 +66,6 @@ export const breakpoints: Breakpoints = {
     limit: '1280px',
   },
 };
+
+export const primaryFont =
+  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";
