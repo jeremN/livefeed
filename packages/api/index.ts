@@ -1,9 +1,3 @@
-import express from 'express';
+import { start } from './server';
 
-// This is temporary, juste for repo initialization
-const app = express();
-const _PORT = 8000;
-
-app.listen(_PORT, () => {
-  console.log(`[server]: Server is running at https://localhost:${_PORT}`);
-});
+start();
