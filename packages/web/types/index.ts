@@ -1,4 +1,4 @@
-export interface HSLObject {
+export interface IHSLObject {
   h: number;
   s: number;
   l: number;
@@ -7,34 +7,60 @@ export interface HSLObject {
 
 export type HSLOutput = string | HSLObject;
 
-export interface Colors {
+export interface IStatusTheme {
+  warningColor: HSLOutput;
+  warningHoverColor: HSLOutput;
+  warningActiveColor: HSLOutput;
+  errorColor: HSLOutput;
+  errorHoverColor: HSLOutput;
+  errorActiveColor: HSLOutput;
+  successColor: HSLOutput;
+  successHoverColor: HSLOutput;
+  successActiveColor: HSLOutput;
+}
+export interface ITheme {
+  primaryFont: string;
+  textColor: HSLOutput;
+  textColorOnPrimary: HSLOutput;
+  textColorOnSecondary: HSLOutput;
+  primaryColor: HSLOutput;
+  primaryHoverColor: HSLOutput;
+  primaryActiveColor: HSLOutput;
+  secondaryColor: HSLOutput;
+  secondaryHoverColor: HSLOutput;
+  secondaryActiveColor: HSLOutput;
+  disabledColor: HSLOutput;
+  status: IStatusTheme;
+}
+export interface IColors {
   [key: string]: string | HSLOutput;
 }
 
-export interface DynamicObjProps {
+export interface IDynamicProps {
   [key: string]: string;
 }
 
-export type LineHeights = {
-  [key: string]: number;
-};
-
-export interface FontWeights {
+export interface ILineHeights {
   default: number;
+  condensed: number;
+}
+
+export interface IFontWeights {
+  normal: number;
   bold: number;
   black?: number;
   thin?: number;
 }
 
-export interface BreakpointsProps {
+export interface IBreakpointsProps {
   syntax: string;
   limit: string;
 }
 
-export interface Breakpoints {
-  [key: string]: BreakpointsProps;
+export interface IBreakpoints {
+  [key: string]: IBreakpointsProps;
 }
 
-export interface CustomElementProps extends React.HTMLAttributes<HTMLElement> {
+export interface ICustomElementProps extends React.HTMLAttributes<HTMLElement> {
   children?: React.ReactNode;
 }

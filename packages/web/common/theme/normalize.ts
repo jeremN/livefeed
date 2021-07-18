@@ -1,16 +1,14 @@
-import { css, createGlobalStyle } from 'styled-components';
+import { css } from 'styled-components';
 
-import { primaryFont } from '../styled/theme';
-
-export const normalize = css`
+export const Normalize = css`
   html {
+    font-size: 16px;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
   }
   body {
     margin: 0;
-    font-family: ${primaryFont};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -159,5 +157,3 @@ export const normalize = css`
     display: none;
   }
 `;
-
-export const Normalize = createGlobalStyle`${normalize}`;

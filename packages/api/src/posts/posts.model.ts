@@ -7,7 +7,7 @@ export interface IPost {
 
 const postSchema = new Schema(
   {
-    author: {
+    creator: {
       type: SchemaTypes.ObjectId,
       ref: 'User',
       required: true,
@@ -16,6 +16,27 @@ const postSchema = new Schema(
       type: String,
       required: true,
     },
+    postType: {
+      type: String,
+      required: true,
+    },
+    meta: {},
+    lastModified: {
+      type: Date,
+      default: Date.now,
+    },
+    comments: [
+      {
+        content: {
+          type: String,
+          required: true,
+        },
+        creator: {
+          type: String,
+        },
+        moderated: Boolean,
+      },
+    ],
   },
   { timestamps: true }
 );

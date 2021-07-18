@@ -15,7 +15,7 @@ const CONNECT_CFG: IMongoCfg = {
   useFindAndModify: false,
 };
 
-export const connect = (url = MONGODB_URI, options = CONNECT_CFG) =>
+export const connect = (url = MONGODB_URI, options = CONNECT_CFG): Promise<typeof mongoose> =>
   mongoose.connect(url, options, () => {
     console.log('[database]: connected to database');
   });
