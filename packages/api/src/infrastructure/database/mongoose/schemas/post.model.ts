@@ -1,9 +1,4 @@
-import { Schema, model, ObjectId, SchemaTypes } from 'mongoose';
-
-export interface IPost {
-  author: ObjectId;
-  content: string;
-}
+import { Schema, model, SchemaTypes } from 'mongoose';
 
 const postSchema = new Schema(
   {

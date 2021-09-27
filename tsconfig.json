@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "ES2018",
+    "target": "ES2019",
     "composite": true,
     "strict": true,
     "noUnusedLocals": true,
@@ -12,6 +12,7 @@
   "exclude": [
     "node_modules",
     "**/*.test.ts",
+    "**/*.spec.ts",
     "dist"
   ]
 }

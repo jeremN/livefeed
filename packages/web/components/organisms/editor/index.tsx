@@ -5,7 +5,7 @@ import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import { Editor } from '@tiptap/core';
 
-import Button from '../../atoms/button';
+import { Button } from '../../atoms/button';
 
 interface EditorMenuBarProps {
   editor: Editor | null;
